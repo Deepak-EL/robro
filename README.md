@@ -16,6 +16,8 @@ It reuses these parts of `wcr_dam_sim`, through its installed `wcr_webots` packa
 
 ![CAD](cad/preview.png)
 
+**For the report:** `docs/REPORT_DATA.md` has the hardware, mass budget, physics and hand calculations, the simulation stack, results, lessons and limitations. `docs/TEST_LOG.md` has every test in order, including the failed attempts and their fixes. The final mission reports are in `results/final/`, the figures in `docs/figures/`, and the test scripts in `tools/` and `tools/tests/`.
+
 ## Run (WSL)
 
 ```

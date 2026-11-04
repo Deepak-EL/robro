@@ -1,0 +1,10 @@
+WCR coverage mission (Nav2 FollowPath / NavigateToPose): goldeneye_dam
+  area            s 1.20..3.40 m, t -1.00..1.00 m (4.4 m2)
+  coverage        72.6 % of the inspectable area (69.2 % incl. obstacle footprints)
+  route           17 lane segments (2 not completed), 19 legs (3 not completed), back at the start: no
+  path length     38.5 m in 405 s sim time
+  defects found   2: crack_0, wet_patch_0
+  obstacle        bush_0     on the map, in the costmap
+  event           lane leg 2 to s 3.41 t -0.97 not completed (aborted)
+  event           lane leg 4 to s 3.41 t -0.72 not completed (aborted)
+  event           home leg 19 to s 1.15 t -0.00 not completed (aborted)

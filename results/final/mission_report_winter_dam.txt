@@ -1,0 +1,18 @@
+WCR coverage mission (Nav2 FollowPath / NavigateToPose): winter_dam
+  area            s 1.90..4.10 m, t -1.00..1.00 m (4.4 m2)
+  coverage        67.9 % of the inspectable area (64.8 % incl. obstacle footprints)
+  route           17 lane segments (11 not completed), 19 legs (11 not completed), back at the start: yes
+  path length     39.2 m in 532 s sim time
+  defects found   2: crack_0, wet_patch_0
+  obstacle        bush_0     on the map, in the costmap
+  event           lane leg 2 to s 4.10 t -0.96 not completed (aborted)
+  event           lane leg 4 to s 4.10 t -0.72 not completed (aborted)
+  event           lane leg 6 to s 4.10 t -0.48 not completed (aborted)
+  event           lane leg 8 to s 4.10 t -0.24 not completed (aborted)
+  event           lane leg 9 to s 1.45 t -0.12 not completed (aborted)
+  event           lane leg 10 to s 4.10 t 0.00 not completed (aborted)
+  event           lane leg 11 to s 1.45 t 0.12 not completed (aborted)
+  event           lane leg 12 to s 3.65 t 0.24 not completed (aborted)
+  event           lane leg 13 to s 1.45 t 0.36 not completed (aborted)
+  event           lane leg 15 to s 1.45 t 0.60 not completed (aborted)
+  event           lane leg 17 to s 1.45 t 0.85 not completed (aborted)
