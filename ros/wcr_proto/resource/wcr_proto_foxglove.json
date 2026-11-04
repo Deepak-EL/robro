@@ -13,7 +13,7 @@
         "near": 0.01,
         "far": 5000
       },
-      "followMode": "follow-none",
+      "followMode": "follow-pose",
       "followTf": "map",
       "scene": { "enableStats": false, "backgroundColor": "#282a30", "meshUpAxis": "z_up" },
       "transforms": {
