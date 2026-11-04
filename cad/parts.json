@@ -1,0 +1,388 @@
+{
+ "units": "mm, g",
+ "frame": "origin board centre on the wall-side face; +x forward (L298N), +y left, +z away from wall",
+ "step": "wcr_proto.step",
+ "total_mass_g": 439.0,
+ "measured_mass_g": 370,
+ "hardware_mass_g": 369.0,
+ "sensor_kit_mass_g": 70,
+ "sensors_mm": {
+  "lidar": [
+   -139.0,
+   0.0,
+   102.5
+  ],
+  "wall_camera": [
+   155.0,
+   40.0,
+   82.5
+  ],
+  "wall_camera_pitch_deg": 70.0,
+  "front_camera": [
+   146.0,
+   22.0,
+   52.5
+  ],
+  "imu": [
+   -118.0,
+   6.0,
+   5.0
+  ]
+ },
+ "centre_of_mass_mm": [
+  -13.7,
+  -1.9,
+  21.9
+ ],
+ "size_mm": [
+  333.8,
+  200.0,
+  115.5
+ ],
+ "wheel": {
+  "diameter": 35.0,
+  "width": 10.0,
+  "axle_z": 10.0,
+  "wall_gap_board": 7.5,
+  "positions": {
+   "FL": [
+    100.0,
+    95.0
+   ],
+   "FR": [
+    100.0,
+    -95.0
+   ],
+   "BL": [
+    -100.0,
+    95.0
+   ],
+   "BR": [
+    -100.0,
+    -95.0
+   ]
+  }
+ },
+ "prop": {
+  "diameter": 254.0,
+  "hub_z": 46.0,
+  "blows": "+z (away from wall)"
+ },
+ "mass_by_kind_g": {
+  "foam_board": 60,
+  "plywood_strip": 12,
+  "bldc_motor": 60,
+  "zip_tie": 2.0,
+  "propeller": 12,
+  "n20_motor": 40,
+  "n20_clamp": 6.0,
+  "wheel": 80,
+  "l298n": 25,
+  "esp32": 10,
+  "esc": 24,
+  "sensor_kit": 70,
+  "wiring": 38.0
+ },
+ "parts": [
+  {
+   "name": "foam_board",
+   "kind": "foam_board",
+   "mass_g": 60,
+   "centre_mm": [
+    -0.0,
+    0.0,
+    2.5
+   ]
+  },
+  {
+   "name": "plywood_strip",
+   "kind": "plywood_strip",
+   "mass_g": 12,
+   "centre_mm": [
+    -0.0,
+    -0.0,
+    7.0
+   ]
+  },
+  {
+   "name": "motor_bell",
+   "kind": "bldc_motor",
+   "mass_g": 60,
+   "centre_mm": [
+    -0.0,
+    -0.0,
+    29.0
+   ]
+  },
+  {
+   "name": "zip_tie_motor_0",
+   "kind": "zip_tie",
+   "mass_g": 0.5,
+   "centre_mm": [
+    -9.0,
+    -0.0,
+    8.5
+   ]
+  },
+  {
+   "name": "zip_tie_motor_1",
+   "kind": "zip_tie",
+   "mass_g": 0.5,
+   "centre_mm": [
+    9.0,
+    -0.0,
+    8.5
+   ]
+  },
+  {
+   "name": "zip_tie_strip_0",
+   "kind": "zip_tie",
+   "mass_g": 0.5,
+   "centre_mm": [
+    -92.0,
+    -0.0,
+    4.5
+   ]
+  },
+  {
+   "name": "zip_tie_strip_1",
+   "kind": "zip_tie",
+   "mass_g": 0.5,
+   "centre_mm": [
+    92.0,
+    -0.0,
+    4.5
+   ]
+  },
+  {
+   "name": "propeller",
+   "kind": "propeller",
+   "mass_g": 12,
+   "centre_mm": [
+    0.0,
+    -0.0,
+    46.0
+   ]
+  },
+  {
+   "name": "FL_n20_can",
+   "kind": "n20_motor",
+   "mass_g": 10,
+   "centre_mm": [
+    100.0,
+    73.2,
+    10.0
+   ]
+  },
+  {
+   "name": "FL_n20_clamp",
+   "kind": "n20_clamp",
+   "mass_g": 1.5,
+   "centre_mm": [
+    100.0,
+    72.5,
+    11.4
+   ]
+  },
+  {
+   "name": "FL_tyre",
+   "kind": "wheel",
+   "mass_g": 20,
+   "centre_mm": [
+    100.0,
+    95.0,
+    10.0
+   ]
+  },
+  {
+   "name": "FR_n20_can",
+   "kind": "n20_motor",
+   "mass_g": 10,
+   "centre_mm": [
+    100.0,
+    -73.2,
+    10.0
+   ]
+  },
+  {
+   "name": "FR_n20_clamp",
+   "kind": "n20_clamp",
+   "mass_g": 1.5,
+   "centre_mm": [
+    100.0,
+    -72.5,
+    11.4
+   ]
+  },
+  {
+   "name": "FR_tyre",
+   "kind": "wheel",
+   "mass_g": 20,
+   "centre_mm": [
+    100.0,
+    -95.0,
+    10.0
+   ]
+  },
+  {
+   "name": "BL_n20_can",
+   "kind": "n20_motor",
+   "mass_g": 10,
+   "centre_mm": [
+    -100.0,
+    73.2,
+    10.0
+   ]
+  },
+  {
+   "name": "BL_n20_clamp",
+   "kind": "n20_clamp",
+   "mass_g": 1.5,
+   "centre_mm": [
+    -100.0,
+    72.5,
+    11.4
+   ]
+  },
+  {
+   "name": "BL_tyre",
+   "kind": "wheel",
+   "mass_g": 20,
+   "centre_mm": [
+    -100.0,
+    95.0,
+    10.0
+   ]
+  },
+  {
+   "name": "BR_n20_can",
+   "kind": "n20_motor",
+   "mass_g": 10,
+   "centre_mm": [
+    -100.0,
+    -73.2,
+    10.0
+   ]
+  },
+  {
+   "name": "BR_n20_clamp",
+   "kind": "n20_clamp",
+   "mass_g": 1.5,
+   "centre_mm": [
+    -100.0,
+    -72.5,
+    11.4
+   ]
+  },
+  {
+   "name": "BR_tyre",
+   "kind": "wheel",
+   "mass_g": 20,
+   "centre_mm": [
+    -100.0,
+    -95.0,
+    10.0
+   ]
+  },
+  {
+   "name": "l298n_standoffs",
+   "kind": "l298n",
+   "mass_g": 25,
+   "centre_mm": [
+    122.0,
+    -32.0,
+    6.5
+   ]
+  },
+  {
+   "name": "esp32_pins",
+   "kind": "esp32",
+   "mass_g": 10,
+   "centre_mm": [
+    -112.0,
+    38.0,
+    8.3
+   ]
+  },
+  {
+   "name": "esc_body",
+   "kind": "esc",
+   "mass_g": 24,
+   "centre_mm": [
+    -118.0,
+    -40.0,
+    9.0
+   ]
+  },
+  {
+   "name": "lidar_mast",
+   "kind": "sensor_kit",
+   "mass_g": 10,
+   "centre_mm": [
+    -139.0,
+    0.0,
+    39.8
+   ]
+  },
+  {
+   "name": "lidar_body",
+   "kind": "sensor_kit",
+   "mass_g": 42,
+   "centre_mm": [
+    -139.0,
+    -0.0,
+    86.7
+   ]
+  },
+  {
+   "name": "camera_mast",
+   "kind": "sensor_kit",
+   "mass_g": 4,
+   "centre_mm": [
+    138.4,
+    37.8,
+    50.6
+   ]
+  },
+  {
+   "name": "wall_camera",
+   "kind": "sensor_kit",
+   "mass_g": 6,
+   "centre_mm": [
+    155.0,
+    40.0,
+    82.5
+   ]
+  },
+  {
+   "name": "front_camera",
+   "kind": "sensor_kit",
+   "mass_g": 6,
+   "centre_mm": [
+    146.0,
+    22.0,
+    52.5
+   ]
+  },
+  {
+   "name": "imu",
+   "kind": "sensor_kit",
+   "mass_g": 2,
+   "centre_mm": [
+    -118.0,
+    6.0,
+    7.8
+   ]
+  },
+  {
+   "name": "wiring",
+   "kind": "wiring",
+   "mass_g": 38.0,
+   "centre_mm": [
+    0.0,
+    0.0,
+    8.0
+   ]
+  }
+ ]
+}
