@@ -228,8 +228,9 @@ def urdf(index):
     out += [f'<material name="{n}"><color rgba="{c[0]:.3f} {c[1]:.3f} {c[2]:.3f} 1"/></material>\n' for n, c in mats.items()]
     out.append(f'<link name="base_link">{visuals("body", f"0 0 {BZ:.5f}")}</link>\n')
     out.append('<link name="prop_link">' + visuals('prop') + '</link>\n')
-    # fixed: a rotor at ~900 rad/s only strobes in RViz / Foxglove (Webots spins it)
-    out.append(joint('prop_joint', 'fixed', 'base_link', 'prop_link', s['prop']))
+    # continuous: the driver publishes a slow DISPLAY angle (a rotor at ~900 rad/s would only strobe
+    # in RViz / Foxglove at 50 Hz); Webots spins its own visual rotor
+    out.append(joint('prop_joint', 'continuous', 'base_link', 'prop_link', s['prop'], axis='0 0 1'))
     for n, (x, y) in wheels().items():
         out.append(f'<link name="{n}_wheel_link">' + visuals('wheel', rpy='0 0 3.14159' if y < 0 else '0 0 0') + '</link>\n')
         out.append(joint(f'{n}_wheel_joint', 'continuous', 'base_link', f'{n}_wheel_link', (x, y, WHEEL_R), axis='0 1 0'))

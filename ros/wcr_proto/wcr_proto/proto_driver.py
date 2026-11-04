@@ -38,6 +38,7 @@ LEFT = ('FL', 'BL')
 CMD_TIMEOUT = 0.5
 CRADLE_RELEASE = 4.0
 PROP_Z = 0.0535              # hub height above the wall (base frame)
+PROP_DISPLAY_W = 12.0        # rad/s shown in RViz / Foxglove at full thrust (~2 turns/s)
 
 
 def diag6(*v):
@@ -105,6 +106,7 @@ class ProtoDriver:
         self.prev_wheel = None
         self.t_pub = -1.0
         self.cradle_removed = False
+        self.prop_angle, self.t_prop = 0.0, 0.0
         self.node.get_logger().info(f'throttle {self.thrust.mode}: target thrust '
                                     f'{self.thrust.target() / G * 1000:.0f} g, robot {model.MASS * 1000:.0f} g')
 
@@ -176,11 +178,16 @@ class ProtoDriver:
             r.x, r.y, r.z, r.w = q
             self.tf.sendTransform(tf)
 
+        # propeller: a slow display angle for RViz / Foxglove (up to ~2 turns/s with thrust); the real
+        # rotor (~900 rad/s) would only strobe at this publish rate
+        w_disp = PROP_DISPLAY_W * math.sqrt(max(0.0, f) / (model.THRUST_MAX_G * G / 1000))
+        self.prop_angle = (self.prop_angle + w_disp * (t - self.t_prop)) % (2 * math.pi)
+        self.t_prop = t
         js = JointState()
         js.header.stamp = stamp
-        js.name = [f'{n}_wheel_joint' for n in WHEELS]
-        js.position = [float(wheel[n]) for n in WHEELS]
-        js.velocity = [float(speed[n]) for n in WHEELS]
+        js.name = [f'{n}_wheel_joint' for n in WHEELS] + ['prop_joint']
+        js.position = [float(wheel[n]) for n in WHEELS] + [self.prop_angle]
+        js.velocity = [float(speed[n]) for n in WHEELS] + [w_disp]
         self.pub_js.publish(js)
 
         gt = Odometry()
