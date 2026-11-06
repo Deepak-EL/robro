@@ -1,0 +1,17 @@
+WCR coverage mission (Nav2 FollowPath / NavigateToPose): goldeneye_gorge
+  area            s 1.20..3.40 m, t -1.00..1.00 m (4.4 m2)
+  coverage        73.2 % of the inspectable area (69.9 % incl. obstacle footprints)
+  route           17 lane segments (9 not completed), 19 legs (10 not completed), back at the start: no
+  path length     40.5 m in 523 s sim time
+  defects found   2: crack_0, wet_patch_0
+  obstacle        bush_0     on the map, in the costmap
+  event           lane leg 2 to s 3.40 t -0.96 not completed (aborted)
+  event           lane leg 4 to s 3.40 t -0.72 not completed (aborted)
+  event           lane leg 6 to s 3.40 t -0.48 not completed (aborted)
+  event           lane leg 8 to s 3.40 t -0.24 not completed (aborted)
+  event           lane leg 10 to s 3.40 t 0.00 not completed (aborted)
+  event           lane leg 12 to s 2.95 t 0.24 not completed (aborted)
+  event           lane leg 14 to s 2.70 t 0.48 not completed (aborted)
+  event           lane leg 16 to s 2.65 t 0.72 not completed (aborted)
+  event           lane leg 18 to s 2.65 t 0.88 not completed (aborted)
+  event           home leg 19 to s 1.15 t -0.00 not completed (aborted)

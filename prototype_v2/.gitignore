@@ -1,0 +1,7 @@
+webots/worlds/_proto_*.wbt
+webots/worlds/.*.wbproj
+__pycache__/
+*.log
+webots/worlds/_proto_*_layout.yaml
+results/costmap_*.png
+results/*.csv
